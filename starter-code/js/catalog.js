@@ -62,7 +62,7 @@ var h3El = document.createElement('h3');
 function updateCounter() {
   var itemCount = document.getElementById('itemCount');
   h3El.innerHTML = '';
-  h3El.textContent = cart.totalItems();
+  h3El.textContent = `(${cart.totalItems()})`;
   itemCount.appendChild(h3El);
 
 }

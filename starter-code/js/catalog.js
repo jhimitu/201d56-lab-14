@@ -29,6 +29,7 @@ function populateForm() {
 function handleSubmit(event) {
 
   // TODO: Prevent the page from reloading
+  event.preventDefault();
 
   // Do all the things ...
   addSelectedItemToCart();
@@ -43,10 +44,28 @@ function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
+  var productSelector = document.getElementById('items');
+  var quantityInput = document.getElementById('quantity');
+  var itemQuant = quantityInput.value;
+  console.log('quantity of item needed is ' + itemQuant);
+  var itemName = productSelector.options[productSelector.selectedIndex].text;
+  console.log('selected item is ' + itemName);
+
+  var myItem = new CartItem(itemName,itemQuant);
+  cart.items.push(myItem);
+  console.table(cart.items);
+
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+function updateCounter() {
+  var itemCount = document.getElementById('itemCount');
+  itemCount.innerHTML = '';
+  var h3El = document.createElement('h3');
+  h3El.textContent = cart.items.length;
+  itemCount.appendChild(h3El);
+
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {

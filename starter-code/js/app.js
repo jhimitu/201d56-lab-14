@@ -11,6 +11,16 @@ Cart.prototype.addItem = function(product, quantity) {
   this.items.push(new CartItem(product,quantity));
 };
 
+Cart.prototype.totalItems = function(){
+  var totals = 0;
+  for(let i = 0; i < this.items.length; i++){
+    totals += Number(this.items[i].quantity,0);
+  }
+  console.log('cart total items: ' + totals);
+  return totals;
+
+};
+
 Cart.prototype.saveToLocalStorage = function() {
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
   localStorage.setItem('Cart',JSON.stringify(Cart));

@@ -9,7 +9,7 @@ var cart = new Cart([]);
 // (the things in the Product.allProducts array) into the drop down list.
 function populateForm() {
 
-  //TODO: Add an <option> tag inside the form's select for each product
+  // DONE -- TODO: Add an <option> tag inside the form's select for each product
   var selectElement = document.getElementById('items');
   console.table(Product.allProducts);
 
@@ -28,7 +28,7 @@ function populateForm() {
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
 function handleSubmit(event) {
 
-  // TODO: Prevent the page from reloading
+  // DONE -- TODO: Prevent the page from reloading
   event.preventDefault();
 
   // Do all the things ...
@@ -39,11 +39,11 @@ function handleSubmit(event) {
 
 }
 
-// TODO: Add the selected item and quantity to the cart
+// DONE -- TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
-  // TODO: suss out the item picked from the select list
-  // TODO: get the quantity
-  // TODO: using those, add one item to the Cart
+  // DONE -- TODO: suss out the item picked from the select list
+  // DONE -- TODO: get the quantity
+  // DONE -- TODO: using those, add one item to the Cart
   var productSelector = document.getElementById('items');
   var quantityInput = document.getElementById('quantity');
   var itemQuant = quantityInput.value;
@@ -58,7 +58,7 @@ function addSelectedItemToCart() {
 }
 
 var h3El = document.createElement('h3');
-// TODO: Update the cart count in the header nav with the number of items in the Cart
+// DONE -- TODO: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {
   var itemCount = document.getElementById('itemCount');
   h3El.innerHTML = '';
@@ -67,10 +67,10 @@ function updateCounter() {
 
 }
 
-// TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
+// DONE -- TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
-  // TODO: Get the item and quantity from the form
-  // TODO: Add a new element to the cartContents div with that information
+  // DONE -- TODO: Get the item and quantity from the form
+  // DONE -- TODO: Add a new element to the cartContents div with that information
 
   var cartPreview = document.getElementById('cartContents');
   var cartPreviewList = document.createElement('ul');

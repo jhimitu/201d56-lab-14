@@ -57,12 +57,12 @@ function addSelectedItemToCart() {
 
 }
 
+var h3El = document.createElement('h3');
 // TODO: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {
   var itemCount = document.getElementById('itemCount');
-  itemCount.innerHTML = '';
-  var h3El = document.createElement('h3');
-  h3El.textContent = cart.items.length;
+  h3El.innerHTML = '';
+  h3El.textContent = cart.totalItems();
   itemCount.appendChild(h3El);
 
 }
@@ -71,6 +71,12 @@ function updateCounter() {
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
   // TODO: Add a new element to the cartContents div with that information
+
+  var cartPreview = document.getElementById('cartContents');
+  var cartPreviewList = document.createElement('ul');
+  cartPreviewList.setAttribute('class','cart-preview-header');
+  console.log(cartPreviewList);
+  cartPreviewList.textContent = 'Cart Preview';
 }
 
 // Set up the "submit" event listener on the form.

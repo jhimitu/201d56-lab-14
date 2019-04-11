@@ -76,7 +76,15 @@ function updateCartPreview() {
   var cartPreviewList = document.createElement('ul');
   cartPreviewList.setAttribute('class','cart-preview-header');
   console.log(cartPreviewList);
-  cartPreviewList.textContent = 'Cart Preview';
+  cartPreview.appendChild(cartPreviewList);
+  console.log('cart items in update preview: ', cart.items);
+  cart.items.forEach((item) => {
+    console.log(`item: ${item.product}, quantity: ${item.quantity}`);
+    var cartPreviewItem = document.createElement('li');
+    cartPreviewList.innerHTML = '';
+    cartPreviewItem.textContent = `item: ${item.product}, quantity: ${item.quantity}`;
+    cartPreviewList.appendChild(cartPreviewItem);
+  });
 }
 
 // Set up the "submit" event listener on the form.

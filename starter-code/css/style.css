@@ -70,12 +70,28 @@ fieldset {
   height: 50px;
 }
 
+fieldset legend {
+  color: #BC7A73;
+  font-size: 30px;
+}
+
 select {
   width: 100px;
+  font-size: 15px;
 }
 input {
-  padding: 2px 4px;
+  width: 100px;
+  padding: 4px 4px;
   border-radius: 5px;
+}
+
+fieldset input:nth-child(4) {
+  border: none;
+  background: #BC7A73;
+  padding: 4px 4px;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
 }
 
 footer {

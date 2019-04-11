@@ -39,10 +39,19 @@ nav ul li {
   display: inline;
 }
 
+nav ul li:nth-child(2) {
+  padding-right: 2px;
+}
+
+#itemCount {
+  float: right;
+  padding-right: 15px;
+}
+
 a {
   color: #fff;
   text-decoration: none;
-  padding: 17px;
+  padding: 17px 2px 17px 17px;
   transition: .350s;
 }
 

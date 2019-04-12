@@ -52,6 +52,11 @@ function showCart() {
     var trEl = document.createElement('tr');
 
     var tdRem = document.createElement('td');
+    var buttonRemove = document.createElement('button');
+    buttonRemove.id = i;
+    buttonRemove.textContent = 'X';
+    tdRem.appendChild(buttonRemove);
+    console.log(buttonRemove);
     // tdRem.textContent = cart.items[i].quantity;
 
     var tdElQuant = document.createElement('td');

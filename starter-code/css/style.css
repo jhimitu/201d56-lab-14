@@ -64,12 +64,8 @@ nav ul li:nth-child(2) {
 a {
   color: #fff;
   text-decoration: none;
-  padding: 17px 2px 17px 17px;
+  padding: 17px;
   transition: .350s;
-}
-
-a:hover {
-  background-color: #E1B8B2;
 }
 
 main {
@@ -79,9 +75,6 @@ main {
 
 main section:nth-child(1) {
   margin-bottom: 30px;
-}
-
-main section:nth-child(2) {
 }
 
 fieldset {

@@ -7,7 +7,7 @@ var Cart = function(items) {
 };
 
 Cart.prototype.addItem = function(product, quantity) {
-  // TODO: Fill in this instance method to create a new CartItem and add it to this.items
+  // DONE -- TODO: Fill in this instance method to create a new CartItem and add it to this.items
   this.items.push(new CartItem(product,quantity));
 };
 
@@ -22,8 +22,13 @@ Cart.prototype.totalItems = function(){
 };
 
 Cart.prototype.saveToLocalStorage = function() {
+<<<<<<< HEAD
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
   localStorage.setItem('cartItems',JSON.stringify(this.items));
+=======
+  // DONE -- TODO: Fill in this instance method to save the contents of the cart to localStorage
+  localStorage.setItem('Cart',JSON.stringify(Cart));
+>>>>>>> 89b18f340d5e3c3730141b54b54a6865e441bad8
 };
 
 Cart.prototype.removeItem = function(itemIndex) {

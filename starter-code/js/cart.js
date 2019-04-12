@@ -5,6 +5,7 @@
 var table = document.getElementById('cart');
 table.addEventListener('click', removeItemFromCart);
 var cart;
+var h3El = document.createElement('h3');
 
 function loadCart() {
   console.log(localStorage.getItem('cart'));
@@ -34,9 +35,17 @@ function clearCart() {
 
 }
 
+function updateCounter() {
+  var itemCount = document.getElementById('itemCount');
+  h3El.innerHTML = '';
+  h3El.textContent = `(${cart.totalItems()})`;
+  itemCount.appendChild(h3El);
+
+}
+
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
-
+  updateCounter();
   // TODO: Find the table body
   var tbody = document.getElementById('cart').getElementsByTagName('tbody')[0];
   console.log(tbody);

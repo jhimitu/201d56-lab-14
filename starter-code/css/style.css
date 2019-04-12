@@ -35,8 +35,9 @@ body > :first-child nav {
 }
 
 .copy ol li {
-  text-align: left;
+  text-align: center;
   font-size: 1.3em;
+  line-height: 35px;
   color: #BC7A73;
 }
 
@@ -107,6 +108,16 @@ fieldset input:nth-child(4) {
   color: #fff;
   font-size: 14px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+#cart {
+  margin: 0 auto;
+  border: 1px solid #BC7A73;
+  padding: 30px;
+}
+
+th, td {
+  padding: 30px;
 }
 
 footer {

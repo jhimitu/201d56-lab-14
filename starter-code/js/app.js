@@ -23,7 +23,7 @@ Cart.prototype.totalItems = function(){
 
 Cart.prototype.saveToLocalStorage = function() {
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
-  localStorage.setItem('Cart',JSON.stringify(this));
+  localStorage.setItem('cartItems',JSON.stringify(this.items));
 };
 
 Cart.prototype.removeItem = function(item) {

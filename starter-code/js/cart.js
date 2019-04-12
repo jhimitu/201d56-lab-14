@@ -29,7 +29,8 @@ function renderCart() {
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {
-
+  var tbody = document.getElementById('cart').getElementsByTagName('tbody')[0];
+  tbody.innerHTML = '';
 
 }
 
@@ -82,9 +83,10 @@ function removeItemFromCart(event) {
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
   // TODO: Save the cart back to local storage
   // TODO: Re-draw the cart table
-  console.log('click remove target: ' + event.target);
+  console.log('click remove target: ' + event.target.id);//if an 'X' button is hit - it will give index to remove in cart
 
-
+  cart.removeItem(event.target.id);
+  renderCart();
 }
 
 // This will initialize the page and draw the cart on screen

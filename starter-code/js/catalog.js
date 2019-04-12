@@ -4,6 +4,7 @@
 
 // Set up an empty cart for use on this page.
 var cart = new Cart([]);
+var h3El = document.createElement('h3');
 
 // On screen load, we call this method to put all of the busmall options
 // (the things in the Product.allProducts array) into the drop down list.
@@ -57,7 +58,7 @@ function addSelectedItemToCart() {
 
 }
 
-var h3El = document.createElement('h3');
+
 // TODO: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {
   var itemCount = document.getElementById('itemCount');
